@@ -1,5 +1,6 @@
 ---
 title: "2026.03.10 - TypeScript satisfies, 쓰는 게 이긴다"
+description: "Record 타입이 리터럴을 string으로 넓히는 문제와 satisfies로 해결하는 법. 코드 리뷰에서 반복된 TypeScript 패턴 정리."
 date: 2026-03-10 22:00:00 +0900
 categories: [개발]
 tags: [typescript, satisfies, 코드리뷰]

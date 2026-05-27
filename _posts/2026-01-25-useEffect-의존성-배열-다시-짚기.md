@@ -1,5 +1,6 @@
 ---
 title: "2026.01.25 - useEffect 의존성 배열 다시 짚기"
+description: "useEffect 의존성 배열을 빈 배열로 두면 안 되는 이유. PR 리뷰에서 반복된 패턴으로 정리한 의존성 배열의 진짜 의미."
 date: 2026-01-25 20:30:00 +0900
 categories: [개발]
 tags: [react, useEffect, javascript, 코드리뷰]
