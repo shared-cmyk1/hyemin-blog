@@ -1,0 +1,25 @@
+{%- comment -%}
+  Chirpy head 확장 훅. 모라티오 리뷰 글에 Review/Product 구조화 데이터(JSON-LD) 주입.
+  본문은 건드리지 않으며, jsonify로 문자열을 안전하게 이스케이프한다.
+  평점(reviewRating)은 임의 값 생성을 피하기 위해 일부러 넣지 않음.
+{%- endcomment -%}
+{%- if page.path contains "모라티오" -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Review",
+  "itemReviewed": {
+    "@type": "Product",
+    "name": "센슈얼리 모라티오",
+    "category": "성인용품",
+    "brand": { "@type": "Brand", "name": "센슈얼리" }
+  },
+  "author": { "@type": "Person", "name": {{ site.social.name | jsonify }} },
+  "publisher": { "@type": "Organization", "name": {{ site.title | jsonify }} },
+  "name": {{ page.title | jsonify }},
+  "reviewBody": {{ page.description | jsonify }},
+  "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }}
+}
+</script>
+{%- endif -%}
